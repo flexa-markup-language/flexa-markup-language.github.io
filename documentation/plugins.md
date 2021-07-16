@@ -1,3 +1,3 @@
 # BPS Text Editors Plugins
 
-[Back](../)
+[Back](index.md)
