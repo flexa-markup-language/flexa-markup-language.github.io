@@ -1,3 +1,3 @@
 # BPS Data Storing Structure Definition
 
-[Back](../)
+[Back](index.md)
