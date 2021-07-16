@@ -25,8 +25,6 @@ BPS is a key-value data storing structure. It allows to store data in several ty
 
 ### <a name="example"></a>Example
 
-Here are most common operations in BPS.
-
 #### BPS data storing structure examples
 
 ```
