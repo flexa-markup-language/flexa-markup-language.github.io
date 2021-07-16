@@ -1,37 +1,87 @@
-## Welcome to GitHub Pages
+# <a name="top"></a>BPS - Basic Persistence System
 
-You can use the [editor on GitHub](https://github.com/BPS-Lib/BPS-Lib.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+BPS is a key-value persistence system that provides a data structure that allows to save and load from disk.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## <a name="menu"></a>Contents
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [Introduction](#introduction)
+  * [Features](#features)
+  * [Example](#example)
+- [Getting Started](#getting-started)
+  * [Download & Installation](#download)
+- [Documentation](docs/documentation/index.md)
+- [License](#license)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## <a name="introduction"></a>Introduction
 
-- Bulleted
-- List
+### <a name="features"></a>Features
 
-1. Numbered
-2. List
+- In-code key-value data structure;
+- Key-value data persistence;
+- Allows store multi-dimensional arrays.
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+### <a name="example"></a>Example
+
+Here are most common operations in BPS.
+
+#### Data Structure Common Operations
+
+```csharp
+public void Foo()
+{
+    BPSFile file = new BPSFile();
+
+    // Adding values
+    file.Add("key", "value");
+    file.Add("int", 10);
+    file.Add("float", 1.5);
+    file.Add("bool", true);
+    file.Add("arr", new List<object> { 0, 1, 2 });
+
+    // Removing values
+    file.Remove("key");
+    file.Remove("arr");
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Disk Operations
+```csharp
+public void Foo(string path)
+{
+    // Loading a BPS file from disk
+    BPSFile file = BPS.Load(path);
+    // Adding a value
+    file.Add("string", "example");
+    // Saving new file
+    BPS.Save(file, path);
+}
+```
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BPS-Lib/BPS-Lib.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## <a name="getting-started"></a>Getting Started
 
-### Support or Contact
+Follow the steps here to get started with BPS.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### <a name="download"></a>Download & Installation
+
+BPS x.x.x is the latest stable release. It can be downloaded [here]().
+
+#### <a name="installation"></a>Installation
+
+TODO: write installation steps
+
+
+## <a name="license"></a>License
+
+BPS is an open source project released under the [MIT](../LICENSE) license.
+
+<br>
+
+---
+
+[Back top](#top)
+
+<br>
