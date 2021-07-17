@@ -16,9 +16,10 @@ BPS is a key-value data storing structure. It allows to store data in several ty
 
 ### <a name="features"></a>Features
 
+- Data storing structure notation;
 - In-code key-value data structure;
 - Key-value data persistence;
-- Allows store multi-dimensional arrays.
+- Allows several types of data.
 
 
 ## <a name="getting-started"></a>Getting Started
