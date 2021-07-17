@@ -11,7 +11,7 @@
   * **Float**: floats can be write `256.`, `256.0` or `256f`.
   * **Double**: e.g. doubles can be write `256.0d` or `256d`.
   * **Boolean**: booleans can be `true` or `false`.
-  * **Array**: arrays should be between braces (`[ ]`) separated by comma `,`. E.g. `[0, 1, 2]`, `['a', 'b', 'c']`, `[[0, 1], [0, 1]]` and so on.
+  * **Array**: arrays should be between braces (`[ ]`) separated by comma (`,`). E.g. `[0, 1, 2]`, `['a', 'b', 'c']`, `[[0, 1], [0, 1]]` and so on.
 
 ### File in BPS Notation
 
