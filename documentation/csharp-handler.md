@@ -89,7 +89,7 @@ public void Foo()
     BPSFile file = BPS.Parse(bpsNotationData);
     
     // Writing in the console a string representation of a BPSFile
-    Console.WriteLine(file);
+    Console.WriteLine(BPS.Plain(file));
 }
 ```
 
