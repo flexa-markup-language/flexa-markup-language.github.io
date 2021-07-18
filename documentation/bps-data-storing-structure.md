@@ -2,16 +2,16 @@
 
 ## Specification
 
-- **Comments**: BPS allows one-line comments. Comments start with hash symbol (`#`). E.g. `# This is a comment`.
-- **Keys**: keys can be started with underscore (`_`) or letter, followed of numbers, lower or upper case letters and/or underscores.
+- **Comments**: BPS allows one-line comments. Comments start with a hash symbol (`#`). E.g. `# This is a comment`.
+- **Keys**: keys can be started with an underscore (`_`) or letter, followed by numbers, lower or upper case letters, and/or underscores.
 - **Values**:
-  * **Strings**: strings should be in double-quotes. E.g. `"this is a string"`.
-  * **Chars**: chars should be in quotes. E.g. `'c'`.
+  * **Strings**: strings must be in double-quotes. E.g. `"this is a string"`.
+  * **Chars**: chars must be in quotes. E.g. `'c'`.
   * **Integers**: e.g. `256`.
   * **Float**: floats can be write `256.`, `256.0` or `256f`.
   * **Double**: e.g. doubles can be write `256.0d` or `256d`.
   * **Boolean**: booleans can be `true` or `false`.
-  * **Array**: arrays should be between braces (`[ ]`) separated by comma (`,`). E.g. `[0, 1, 2]`, `['a', 'b', 'c']`, `[[0, 1], [0, 1]]` and so on.
+  * **Array**: arrays must be between braces (`[ ]`) separated by comma (`,`). E.g. `[0, 1, 2]`, `['a', 'b', 'c']`, `[[0, 1], [0, 1]]` and so on.
 
 ### File in BPS Notation
 
@@ -39,7 +39,7 @@ intArr:[0, 1, 2, 10, -5];
 floatArr:[0.9, 1.7, -0.2, 1.06, -5.618];
 boolArr:[true, false, true];
 
-# Multdimensional array
+# Multidimensional array
 multArr2:[
   [0, 1, 2],
   [0, 1, 2],
@@ -66,6 +66,48 @@ multArr3:[
 ];
 
 ```
+
+## BPS Handle Specification
+
+A BPS handle must contain the following classes and methods.
+
+### BPSFile class
+
+#### Attributes
+- `private string Path;`
+This attribute contains the path of BPSFile. The method set must normalize the path ensuring this has the extension.
+
+#### Methods
+
+- `public void Save()`
+This method will call the method `Save(BPSFile file)` from the `BPS` class passing itself.
+- `public string Plain()`
+This method will call the method `Plain(BPSFile file)` from the `BPS` class passing itself.
+- `public void Add(string key, object value)`
+This method will add a new value in `BPSFile`. If the key already exists, the value must be updated.
+- `public bool Remove(string key)`
+This method will remove a value from `BPSFile`. It will return true if was sucessful or false if the key does not exist.
+- `public object Find(string key)`
+This method will return the value related to the key. If the key does not exist, it will return null.
+- `public int Count()`
+This method will count the data amount of `BPSFile`.
+- `public void Clear()`
+This method will erase all values from the `BPSFile`.
+- `public void Contains(string key)`
+This method checks if a key exists returning true or false.
+
+### BPS class
+
+#### Methods
+- `public static BPSFile Load(string path)`
+This method will load a `BPSFile` from disk.
+- `public static void Save(BPSFile file)`
+This method will save a `BPSFile` on disk.
+- `public static BPSFile Parse(string data)`
+This method will parse a string representation in BPS notation to a `BPSFile`.
+- `public static string Plain(BPSFile file)`
+This method will return a string representation of a `BPSFile`.
+
 
 ---
 
