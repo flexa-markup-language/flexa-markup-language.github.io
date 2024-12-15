@@ -1,6 +1,6 @@
-# <a name="top"></a>BPS - Basic Persistence System
+# <a name="top"></a>BML - Basic Markup Language
 
-BPS is a key-value data storing structure. It allows to store data in several types, even array.
+BPS is a data serialization format. It allows to store data in several types, even array.
 
 
 ## <a name="menu"></a>Contents
@@ -21,17 +21,17 @@ BPS is a key-value data storing structure. It allows to store data in several ty
 - Key-value data persistence;
 - Allows several types of data.
 
-
+<!--
 ## <a name="getting-started"></a>Getting Started
 
 So far, there is only support for BPS in the C# language. In the future they will also be implemented for other languages.
 
 - [BPS C# Handler](https://github.com/BPS-Lib/BPS-csharp-handler)
-
+-->
 
 ## <a name="license"></a>License
 
-All BPS projects are open source and released under the [MIT](../LICENSE) license.
+All BML projects are open source and released under the [MIT](../LICENSE) license.
 
 <br>
 
