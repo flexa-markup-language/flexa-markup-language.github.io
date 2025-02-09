@@ -1,6 +1,6 @@
-# <a name="top"></a>BML - Basic Markup Language
+# <a name="top"></a>FML - Basic Markup Language
 
-BML is a data serialization format. It allows to store data in several types, even array.
+FML is a data serialization format. It allows to store data in several types, even array.
 
 
 ## <a name="menu"></a>Contents
@@ -24,14 +24,14 @@ BML is a data serialization format. It allows to store data in several types, ev
 <!--
 ## <a name="getting-started"></a>Getting Started
 
-So far, there is only support for BML in the C# language. In the future they will also be implemented for other languages.
+So far, there is only support for FML in the C# language. In the future they will also be implemented for other languages.
 
-- [BML C# Handler](https://github.com/BML-Lib/BML-csharp-handler)
+- [FML C# Handler](https://github.com/flexa-markup-language/csharp-lib)
 -->
 
 ## <a name="license"></a>License
 
-All BML projects are open source and released under the [MIT](../LICENSE) license.
+All FML projects are open source and released under the [MIT](../LICENSE) license.
 
 <br>
 
