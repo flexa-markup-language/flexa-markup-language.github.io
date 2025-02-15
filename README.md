@@ -2,12 +2,6 @@
 
 FML is a data serialization language. It allows to manipulate data in several types.
 
-
-## Guides and Documentation
-
-All documentation of FML can be found [here](https://flexa-markup-language.github.io/). It contains all guides and detailed documentation.
-
-
 ## Specification
 
 - **Comments**: FML allows one-line comments. Comments start with a hash symbol (`#`). E.g. `# This is a comment`.
@@ -19,7 +13,7 @@ All documentation of FML can be found [here](https://flexa-markup-language.githu
   * **Integers<sup>1</sup>**: e.g. `255`.
   * **Float<sup>1</sup>**: e.g. floats can be write `255.`, `255.0` or `255f`.
   * **Boolean**: booleans can be `true` or `false`.
-  * **Array**: arrays must be curly between braces (`{ }`) separated by comma (`,`). E.g. `{0, 1, 2}`, `{'a', 'b', 'c'}`, `{{0, 1}, {0, 1}}` and so on.
+  * **Array**: arrays must be curly between braces (`{ }`) separated by comma (`,`). E.g. `{0, 1, 2}`, `{'a', 'b', 'c'}`, `% raw %{{0, 1}, {0, 1}}% endraw %` and so on.
 
 <sup>1</sup> Some types must be parsed as maximum language precision for that type.
 
