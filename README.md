@@ -8,12 +8,13 @@ FML is a data serialization language. It allows to manipulate data in several ty
 - **Keys**: keys can be started with an underscore (`_`) or letter, followed by numbers, lower or upper case letters, and/or underscores.
 - **Values**:
   * **Strings**: strings must be in double-quotes. E.g. `"this is a string"`.
-  * **Multiline Strings**: strings must be in backtick. E.g. `` `this is a string` ``.
+  <!-- * **Multiline Strings**: strings must be in backtick. E.g. `` `this is a string` ``. -->
   * **Chars**: chars must be in quotes. E.g. `'c'`.
   * **Integers<sup>1</sup>**: e.g. `255`.
+  <!-- * **Other Base Integers<sup>1</sup>**: e.g. `0b255`, `0o255`, `0x255`. -->
   * **Float<sup>1</sup>**: e.g. floats can be write `255.`, `255.0` or `255f`.
-  * **Boolean**: booleans can be `true` or `false`.
-  * **Array**: arrays must be curly between braces (`{ }`) separated by comma (`,`). E.g. `{0, 1, 2}`, `{'a', 'b', 'c'}`, `% raw %{{0, 1}, {0, 1}}% endraw %` and so on.
+  <!-- * **Scientific Notation Floats<sup>1</sup>**: e.g. `10-1`, `10+1`, `-10-5`. -->
+  * **Array**: arrays must be curly between braces (`{ }`) separated by comma (`,`). E.g. `{0, 1, 2}`, `{'a', 'b', 'c'}`, `{% raw %}{{0, 1}, {0, 1}}{% endraw %}` and so on.
 
 <sup>1</sup> Some types must be parsed as maximum language precision for that type.
 
