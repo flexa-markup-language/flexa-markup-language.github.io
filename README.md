@@ -1,42 +1,98 @@
-# <a name="top"></a>FML - Basic Markup Language
+# The FML Data Serialization Language
 
-FML is a data serialization format. It allows to store data in several types, even array.
-
-
-## <a name="menu"></a>Contents
-
-- [Introduction](#introduction)
-  * [Features](#features)
-- [Getting Started](#getting-started)
-- [Documentation](documentation/index.md)
-- [License](#license)
+FML is a data serialization language. It allows to manipulate data in several types.
 
 
-## <a name="introduction"></a>Introduction
+## Guides and Documentation
 
-### <a name="features"></a>Features
+All documentation of FML can be found [here](https://flexa-markup-language.github.io/). It contains all guides and detailed documentation.
 
-- Data storing structure notation;
-- In-code key-value data structure;
-- Key-value data persistence;
-- Allows several types of data.
 
-<!--
-## <a name="getting-started"></a>Getting Started
+## Specification
 
-So far, there is only support for FML in the C# language. In the future they will also be implemented for other languages.
+- **Comments**: FML allows one-line comments. Comments start with a hash symbol (`#`). E.g. `# This is a comment`.
+- **Keys**: keys can be started with an underscore (`_`) or letter, followed by numbers, lower or upper case letters, and/or underscores.
+- **Values**:
+  * **Strings**: strings must be in double-quotes. E.g. `"this is a string"`.
+  * **Multiline Strings**: strings must be in backtick. E.g. `` `this is a string` ``.
+  * **Chars**: chars must be in quotes. E.g. `'c'`.
+  * **Integers<sup>1</sup>**: e.g. `255`.
+  * **Float<sup>1</sup>**: e.g. floats can be write `255.`, `255.0` or `255f`.
+  * **Boolean**: booleans can be `true` or `false`.
+  * **Array**: arrays must be curly between braces (`{ }`) separated by comma (`,`). E.g. `{0, 1, 2}`, `{'a', 'b', 'c'}`, `{{0, 1}, {0, 1}}` and so on.
 
-- [FML C# Handler](https://github.com/flexa-markup-language/csharp-lib)
--->
+<sup>1</sup> Some types must be parsed as maximum language precision for that type.
 
-## <a name="license"></a>License
+### File in FML Notation
 
-All FML projects are open source and released under the [MIT](../LICENSE) license.
+```fml
+# All data types of a FML file.
 
-<br>
+# Literals
+string:"string \"between\" double quotes";
+char:'c';
+quote_in_char:'\'';
 
----
+# Numerics
+int:10;
+float:0.5;
 
-[Back top](#top)
+# Booleans
+boolTrue:true;
+boolFalse:false;
 
-<br>
+# Vector
+stringArr:{"yes", "no", "maybe"};
+chargArr:{'a', 'b', 'c'};
+intArr:{0, 1, 2, 10, -5};
+floatArr:{0.9, 1.7, -0.2, 1.06, -5.618};
+boolArr:{true, false, true};
+
+# Matrix
+multArr2:{
+  {0, 1, 2},
+  {0, 1, 2},
+  {0, 1, 2}
+};
+
+# Multidimensional array
+multArr3:{
+  {
+    {0, 1, 2},
+    {0, 1, 2},
+    {0, 1, 2}
+  },
+  {
+    {0, 1, 2},
+    {0, 1, 2},
+    {0, 1, 2}
+  },
+  {
+    {0, 1, 2},
+    {0, 1, 2},
+    {0, 1, 2}
+  }
+};
+
+# Sub-structures
+sub_str:
+  v1: 10;
+  v2: "sub";
+;
+
+# Array of sub-structures
+stringArr:{
+  sub_str:
+    v1:10;
+    v2:"sub";
+  ;,
+  sub_str:
+    v1:11;
+    v2:"sup";
+  ;,
+  sub_str:
+    v1:20;
+    v2:"sut";
+  ;
+};
+```
